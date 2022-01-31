@@ -23,10 +23,12 @@
     padding: 5px;
     
   }
-  img{
-      width: 400px;
-  }
+  
  
+.rotr{
+  transform: rotateZ(90deg)
+}
+
   .text{
       width: 30%;
       height: 30%;
@@ -59,4 +61,8 @@
   }
   h2{
       text-align: center;
+  }
+  .row{
+    align-items: center;
+    padding: 5px;
   }
