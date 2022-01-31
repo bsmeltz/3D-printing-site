@@ -41,7 +41,7 @@
   body{
       background-color:darkslategray;
       color: lightgrey;
-      padding: 5px 5px 5px 5px;
+      
   }
   hr{
       color:lightgrey;
@@ -62,8 +62,4 @@
   h2{
       text-align: center;
   }
-  .row{
-    align-items: center;
-    padding: 5px;
-    height: 600px;
-  }
+ 
