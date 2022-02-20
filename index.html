@@ -64,8 +64,35 @@
                 </div>
                 
               </div>
+              <div class="row, review">
+                
+                <div class="col-md-12 mb-3">
+                  <p>And now, for a random fun fact!</p>
+                  <button id="factButton">Get a Fun Fact!</button>
+                  <div id= "funFact"></div>
+                </div>
+              </div>
           </div>
           
+          <script>
+            //document.getElementById("factButton").onclick = console.log("pressed");
+            document.getElementById("factButton").onclick = getFact;
+
+            function getFact(){  
+                console.log("entered function");
+                const url = "https://api.aakhilv.me/facts/json";
+                fetch(url)
+                  .then(function(response){
+                    //alert(response.json());
+                    return response.json();
+                  }).then(function(json){
+                    var fact = "<h3>Fact</h3><p>" + json.text + "</p>";
+                    
+                    document.getElementById("funFact").innerHTML = fact;
+                  })
+
+            }
+          </script>
           
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
