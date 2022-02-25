@@ -80,13 +80,13 @@
 
             function getFact(){  
                 console.log("entered function");
-                const url = "https://api.aakhilv.me/facts/json";
+                const url = "https://api.aakhilv.me/facts";
                 fetch(url)
                   .then(function(response){
                     //alert(response.json());
-                    return response.json();
-                  }).then(function(json){
-                    var fact = "<h3>Fact</h3><p>" + json.text + "</p>";
+                    return response.text();
+                  }).then(function(text){
+                    var fact = "<h3>Fact</h3><p>" + text.replace("[","").replace("]","").replace("\"","").replace("\"","")  + "</p>";
                     
                     document.getElementById("funFact").innerHTML = fact;
                   })
